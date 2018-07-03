@@ -1,0 +1,33 @@
+{
+  "name": "cordova-plugin-bluetetherplugin",
+  "version": "0.0.1",
+  "description": "An Android Cordova plugin that allows users to automatically enable bluetooth tethering.",
+  "main": "./www/BlueTetherPlugin.js",
+  "cordova": {
+    "id": "cordova-plugin-bluetetherplugin",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laphroaigteam/BlueTetherPlugin.git"
+  },
+  "keywords": [
+    "Bluetooth-Tethering",
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ],
+  "author": "LaPhroaig <rosanne.tol.van@ahold.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/laphroaigteam/BlueTetherPlugin/issues"
+  },
+  "homepage": "https://github.com/laphroaigteam/BlueTetherPlugin/"
+}

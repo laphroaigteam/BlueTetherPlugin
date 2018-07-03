@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-bluetetherplugin" version="0.0.1">
+    <name>BlueTetherPlugin</name>
+
+    <description>An Android Cordova plugin that allows users to display simple Toast messages at the bottom of the screen.</description>
+    <license>MIT</license>
+
+    <keywords>cordova,android,bluetooth-tethering</keywords>
+    <repo>https://github.com/laphroaigteam/bluetetherplugin/BlueTether-Cordova-Plugin.git</repo>
+    <issue>https://github.com/laphroaigteam/bluetetherplugin/issues</issue>
+  
+    <engines>
+        <engine name="cordova" version=">=3.0.0"/>
+    </engines>
+  
+    <js-module src="www/bluetetherplugin.js" name="BlueTetherPlugin">
+        <clobbers target="window.plugins.BlueTetherPlugin" />
+    </js-module>
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="BlueTetherPlugin">
+                <param name="android-package" value="com.laphroaigteam.cordova.plugin.BlueTetherPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/BlueTetherPlugin.java" target-dir="src/com/laphroaig/cordova/plugin" />
+		<source-file src="src/android/BTPanServiceListener.java" target-dir="src/com/laphroaig/cordova/plugin" />
+		
+		<config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.BLUETOOTH" />
+            <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+            <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+			<uses-permission android:name="android.permission.WRITE_SETTINGS" />
+        </config-file>
+    </platform>
+</plugin>
