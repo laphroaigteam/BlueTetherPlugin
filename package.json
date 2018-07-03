@@ -2,7 +2,6 @@
   "name": "cordova-plugin-bluetetherplugin",
   "version": "0.0.1",
   "description": "An Android Cordova plugin that allows users to automatically enable bluetooth tethering.",
-  "main": "./www/BlueTetherPlugin.js",
   "cordova": {
     "id": "cordova-plugin-bluetetherplugin",
     "platforms": [
