@@ -8,7 +8,7 @@
     <license>MIT</license>
 
     <keywords>cordova,android,bluetooth-tethering</keywords>
-    <repo>https://github.com/laphroaigteam/bluetetherplugin/BlueTether-Cordova-Plugin.git</repo>
+    <repo>https://github.com/laphroaigteam/bluetetherplugin/BlueTetherPlugin.git</repo>
     <issue>https://github.com/laphroaigteam/bluetetherplugin/issues</issue>
   
     <engines>
