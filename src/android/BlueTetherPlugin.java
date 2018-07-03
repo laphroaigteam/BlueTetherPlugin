@@ -76,14 +76,12 @@ public class BlueTetherPlugin extends CordovaPlugin {
 
 		setTetheringOn.invoke(instance,true);
 
-	} catch (ClassNotFoundException e) {
-		callbackContext.error("Unhandled action in Bluetoothtether: "+e.getMessage());
-	} catch (Exception e) {
+	}  catch (Exception e) {
 		callbackContext.error("Unhandled action in Bluetoothtether: "+e.getMessage());
 		return true;
 	}
-	return false;
-	callbackContext.error("Unhandled action in Bluetoothtether: " + action);
+	//return false;
+	//callbackContext.error("Unhandled action in Bluetoothtether: setTetherOn");
 	}
 	
    @SuppressLint("NewApi")
