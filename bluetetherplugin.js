@@ -1,6 +1,6 @@
 module.exports = {
 //
-// test
+// testing
     connect: function (success, failure) {
         cordova.exec(success, failure, "BlueTetherPlugin", "connect", []);
     },
