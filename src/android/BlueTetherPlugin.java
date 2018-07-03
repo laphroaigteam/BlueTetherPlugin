@@ -63,6 +63,7 @@ public class BlueTetherPlugin extends CordovaPlugin {
 	}
 	
 	public void setTetherOn(CordovaArgs args, CallbackContext callbackContext) throws JSONException{
+		try{
 		Class<?> classBluetoothPan = Class.forName(sClassName);
 
 		Constructor<?> ctor = classBluetoothPan.getDeclaredConstructor(Context.class, BluetoothProfile.ServiceListener.class);
