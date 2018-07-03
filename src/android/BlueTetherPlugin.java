@@ -24,7 +24,7 @@ public class BlueTetherPlugin extends CordovaPlugin {
 	private static final String CONNECT = "connect";
 	private CallbackContext connectCallback;
 	
-	public boolean execute(String action, CordovaArgs args, CallbackContext callbackContext) throws JSONException {
+	public boolean execute(String action, CordovaArgs args, CallbackContext callbackContext) {
         boolean validAction = true;
         if (action.equals(CONNECT)) {
 
