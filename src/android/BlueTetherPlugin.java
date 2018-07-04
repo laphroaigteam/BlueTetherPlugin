@@ -58,14 +58,14 @@ public class BlueTetherPlugin extends CordovaPlugin {
 
         } catch (ClassNotFoundException e) {
             callbackContext.error("Error encountered: " + e.getMessage());
-			return false;
+			//return false;
         } catch (Exception e) {
             callbackContext.error("Error encountered: " + e.getMessage());
-			return false;
+			//return false;
         }
       PluginResult pluginResult = new PluginResult(PluginResult.Status.OK);
       callbackContext.sendPluginResult(pluginResult);
-      return true;
+      //return true;
 	}
 	
 	public void setTetherOn(CordovaArgs args, CallbackContext callbackContext) throws JSONException{
@@ -85,7 +85,7 @@ public class BlueTetherPlugin extends CordovaPlugin {
 
 	}  catch (Exception e) {
 		callbackContext.error("Unhandled action in Bluetoothtether: "+e.getMessage());
-		return true;
+		//return true;
 	}
 	//return false;
 	//callbackContext.error("Unhandled action in Bluetoothtether: setTetherOn");
