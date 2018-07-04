@@ -17,7 +17,7 @@ import java.lang.reflect.*;
 import java.lang.Object.*;
 import android.os.Bundle;
 import android.annotation.SuppressLint;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v4.app.AppCompatActivity;
 
 public class BlueTetherPlugin extends CordovaPlugin {
 	BluetoothAdapter mBluetoothAdapter = null;
