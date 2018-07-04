@@ -22,7 +22,7 @@ public class BTPanServiceListener implements BluetoothProfile.ServiceListener {
 								   ) {
         //Some code must be here or the compiler will optimize away this callback.
         Log.i("MyApp", "BTPan proxy connected");
-		private final CallbackContext callbackContext;
+		CallbackContext callbackContext = null;
         try {
             boolean nowVal = ((Boolean) proxy.getClass().getMethod("isTetheringOn", new Class[0]).invoke(proxy, new Object[0])).booleanValue();
             if (nowVal) {
