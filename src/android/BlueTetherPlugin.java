@@ -19,7 +19,7 @@ import android.os.Bundle;
 import android.annotation.SuppressLint;
 import android.support.v7.app.AppCompatActivity;
 
-public class BlueTetherPlugin extends CordovaPlugin, AppCompatActivity {
+public class BlueTetherPlugin extends CordovaPlugin {
 	BluetoothAdapter mBluetoothAdapter = null;
 	Class<?> classBluetoothPan = null;
 	Constructor<?> BTPanCtor = null;
@@ -44,7 +44,7 @@ public class BlueTetherPlugin extends CordovaPlugin, AppCompatActivity {
 	}
 
     public void connect(CordovaArgs args, CallbackContext callbackContext) throws JSONException {
-		Context MyContext = getApplicationContext();
+		Context MyContext = cordova.getActivity();
 		mBluetoothAdapter = getBTAdapter();
 		String sClassName = "android.bluetooth.BluetoothPan";
 		try {
@@ -74,7 +74,7 @@ public class BlueTetherPlugin extends CordovaPlugin, AppCompatActivity {
 
 		Constructor<?> ctor = classBluetoothPan.getDeclaredConstructor(Context.class, BluetoothProfile.ServiceListener.class);
 		ctor.setAccessible(true);
-		Object instance = ctor.newInstance(getApplicationContext(), new BTPanServiceListener(getApplicationContext())); 
+		Object instance = ctor.newInstance(cordova.getActivity(), new BTPanServiceListener(cordova.getActivity())); 
 		// Set Tethering ON
 		Class[] paramSet = new Class[1];
 		paramSet[0] = boolean.class;
