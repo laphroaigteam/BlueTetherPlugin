@@ -9,11 +9,10 @@ import android.util.Log;
 import android.widget.Toast;
 
 public class BTPanServiceListener implements BluetoothProfile.ServiceListener {
-    private final Context context;
+    //private final Context context;
     public static boolean state = false;
 	
-	
-     {
+	public BTPanServiceListener(final Context context)  {
         this.context = context;
     }
 
