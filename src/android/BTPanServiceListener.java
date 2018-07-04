@@ -1,4 +1,4 @@
-package com.solutions.developer.android.com.bluetoothtethering;
+package com.ahold.blueteth.cordova.plugin;
 
 import java.lang.reflect.InvocationTargetException;
 
@@ -12,14 +12,13 @@ public class BTPanServiceListener implements BluetoothProfile.ServiceListener {
     private final Context context;
     public static boolean state = false;
 
-    public BTPanServiceListener(final Context context) {
+     {
         this.context = context;
     }
 
-    @Override
     public void onServiceConnected(final int profile,
-                                   final BluetoothProfile proxy,
-								   final CallbackContext callbackContext) {
+                                   final BluetoothProfile proxy
+								   ) {
         //Some code must be here or the compiler will optimize away this callback.
         Log.i("MyApp", "BTPan proxy connected");
         try {
@@ -33,7 +32,7 @@ public class BTPanServiceListener implements BluetoothProfile.ServiceListener {
                 Toast.makeText(context, "Turning bluetooth tethering on", Toast.LENGTH_SHORT).show();
                 state = true;
             }
-            BluetoothTethering.changeToggleState(state);
+            BlueTetherPlugin.changeToggleState(state, callbackContext);
         } catch (IllegalAccessException e) {
             // TODO Auto-generated catch block
             callbackContext.error("Error encountered: " + e.getMessage());
@@ -53,7 +52,6 @@ public class BTPanServiceListener implements BluetoothProfile.ServiceListener {
         }
     }
 
-    @Override
     public void onServiceDisconnected(final int profile) {
     }
 }

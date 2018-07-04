@@ -17,7 +17,7 @@ import java.lang.reflect.*;
 import java.lang.Object.*;
 import android.os.Bundle;
 import android.annotation.SuppressLint;
-import android.support.v4.app.AppCompatActivity;
+//import android.support.v4.app.AppCompatActivity;
 
 public class BlueTetherPlugin extends CordovaPlugin {
 	BluetoothAdapter mBluetoothAdapter = null;
@@ -30,7 +30,7 @@ public class BlueTetherPlugin extends CordovaPlugin {
 	private static final String CONNECT = "connect";
 	private CallbackContext connectCallback;
 	
-	public boolean execute(String action, CordovaArgs args, CallbackContext callbackContext) {
+	public boolean execute(String action, CordovaArgs args, CallbackContext callbackContext) throws JSONException {
         boolean validAction = true;
         if (action.equals(CONNECT)) {
 
