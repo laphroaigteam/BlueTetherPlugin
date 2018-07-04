@@ -11,7 +11,7 @@ import android.widget.Toast;
 public class BTPanServiceListener implements BluetoothProfile.ServiceListener {
     private final Context context;
     public static boolean state = false;
-
+	
      {
         this.context = context;
     }
@@ -32,7 +32,7 @@ public class BTPanServiceListener implements BluetoothProfile.ServiceListener {
                 Toast.makeText(context, "Turning bluetooth tethering on", Toast.LENGTH_SHORT).show();
                 state = true;
             }
-            BlueTetherPlugin.changeToggleState(state, callbackContext);
+            BlueTetherPlugin.changeToggleState(state, CallbackContext callbackContext);
         } catch (IllegalAccessException e) {
             // TODO Auto-generated catch block
             callbackContext.error("Error encountered: " + e.getMessage());
