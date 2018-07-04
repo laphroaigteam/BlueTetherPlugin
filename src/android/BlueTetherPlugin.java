@@ -14,6 +14,9 @@ import org.json.JSONException;
 import org.json.JSONObject;
 //
 import java.lang.reflect.*;
+import java.lang.object.*;
+import android.os.Bundle;
+import android.annotation.SuppressLint;
 
 public class BlueTetherPlugin extends CordovaPlugin {
 	BluetoothAdapter mBluetoothAdapter = null;
@@ -22,7 +25,7 @@ public class BlueTetherPlugin extends CordovaPlugin {
 	Object BTSrvInstance = null;
 	Class<?> noparams[] = {};
 	Method mIsBTTetheringOn;
-	public static Switch toggle ;
+	//public static Switch toggle ;
 	private static final String CONNECT = "connect";
 	private CallbackContext connectCallback;
 	
