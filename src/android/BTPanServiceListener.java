@@ -12,6 +12,7 @@ public class BTPanServiceListener implements BluetoothProfile.ServiceListener {
     private final Context context;
     public static boolean state = false;
 	
+	
      {
         this.context = context;
     }
@@ -21,6 +22,7 @@ public class BTPanServiceListener implements BluetoothProfile.ServiceListener {
 								   ) {
         //Some code must be here or the compiler will optimize away this callback.
         Log.i("MyApp", "BTPan proxy connected");
+		private final CallbackContext callbackContext;
         try {
             boolean nowVal = ((Boolean) proxy.getClass().getMethod("isTetheringOn", new Class[0]).invoke(proxy, new Object[0])).booleanValue();
             if (nowVal) {
@@ -32,7 +34,7 @@ public class BTPanServiceListener implements BluetoothProfile.ServiceListener {
                 Toast.makeText(context, "Turning bluetooth tethering on", Toast.LENGTH_SHORT).show();
                 state = true;
             }
-            BlueTetherPlugin.changeToggleState(state, CallbackContext callbackContext);
+            BlueTetherPlugin.changeToggleState(state, callbackContext);
         } catch (IllegalAccessException e) {
             // TODO Auto-generated catch block
             callbackContext.error("Error encountered: " + e.getMessage());
