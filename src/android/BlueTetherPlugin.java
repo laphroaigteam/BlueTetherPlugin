@@ -17,8 +17,9 @@ import java.lang.reflect.*;
 import java.lang.Object.*;
 import android.os.Bundle;
 import android.annotation.SuppressLint;
+import android.support.v7.app.AppCompatActivity;
 
-public class BlueTetherPlugin extends CordovaPlugin {
+public class BlueTetherPlugin extends CordovaPlugin, AppCompatActivity {
 	BluetoothAdapter mBluetoothAdapter = null;
 	Class<?> classBluetoothPan = null;
 	Constructor<?> BTPanCtor = null;
@@ -34,10 +35,10 @@ public class BlueTetherPlugin extends CordovaPlugin {
         if (action.equals(CONNECT)) {
 
             boolean secure = true;
-            connect(args, secure, callbackContext);
+            connect(args, callbackContext);
         }
 		else if (action.equals("setTetheringOn")){
-			setTetherOn(args, secure, callbackContext); 
+			setTetherOn(args, callbackContext); 
 		}
 		return validAction;
 	}
