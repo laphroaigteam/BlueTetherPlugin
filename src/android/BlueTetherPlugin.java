@@ -12,6 +12,8 @@ import org.apache.cordova.PluginResult;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+//
+import java.lang.reflect.*;
 
 public class BlueTetherPlugin extends CordovaPlugin {
 	BluetoothAdapter mBluetoothAdapter = null;
