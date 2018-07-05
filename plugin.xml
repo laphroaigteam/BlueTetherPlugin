@@ -16,7 +16,7 @@
     </engines>
   
     <js-module src="www/bluetetherplugin.js" name="bluetetherplugin">
-        <clobbers target="window.bluetetherplugin" />
+        <clobbers target="window.plugins.bluetetherplugin" />
     </js-module>
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
