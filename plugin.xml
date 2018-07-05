@@ -15,8 +15,8 @@
         <engine name="cordova" version=">=3.0.0"/>
     </engines>
   
-    <js-module src="www/bluetetherplugin.js" name="BlueTetherPlugin">
-        <clobbers target="window.plugins.BlueTetherPlugin" />
+    <js-module src="www/bluetetherplugin.js" name="bluetetherplugin">
+        <clobbers target="window.bluetetherplugin" />
     </js-module>
     <platform name="android">
         <config-file target="res/xml/config.xml" parent="/*">
