@@ -94,7 +94,7 @@ public class BlueTetherPlugin extends CordovaPlugin {
 	
    @SuppressLint("NewApi")
     private BluetoothAdapter getBTAdapter() {
-            BluetoothManager bm = (BluetoothManager) context.getSystemService(Context.BLUETOOTH_SERVICE);
+            BluetoothManager bm = (BluetoothManager) cordova.getActivity().getSystemService(Context.BLUETOOTH_SERVICE);
             return bm.getAdapter();
     }
 
