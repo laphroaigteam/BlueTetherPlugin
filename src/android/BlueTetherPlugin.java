@@ -98,7 +98,7 @@ public class BlueTetherPlugin extends CordovaPlugin {
             return bm.getAdapter();
     }
 
-    public  static void changeToggleState(boolean state, final CallbackContext callbackContext) {
+/*     public  static void changeToggleState(boolean state, final CallbackContext callbackContext) {
         try{
             if(state){
                 toggle.setChecked(BTPanServiceListener.state);
@@ -108,6 +108,6 @@ public class BlueTetherPlugin extends CordovaPlugin {
         }catch (Exception e){
             callbackContext.error("Error encountered: " + e.getMessage());
         }
-    }	
+    } */	
 	
 }
